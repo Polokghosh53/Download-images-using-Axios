@@ -13,7 +13,7 @@ Making a random image downloader using Axios in HTML.
 ### Support
 HTML
 
-The HTML file can be found in your application's documents or can simply be searched by the name of the file of the code showing the icon of the browser.
+The HTML file can be found in your application's documents or can simply be searched by the name of the file of the code showing the icon of the browser beside the name.
 
 
 ### Connect with me:
