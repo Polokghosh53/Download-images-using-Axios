@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Download Images using Axios</title>
+</head>
+
+<body>
+    <button onclick="download()">Download Image</button>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script> 
+<script>
+    function download() {
+        axios({
+                url: 'https://source.unsplash.com/random/500x500', #random images are generated at 500x500 size which can be altered
+                method: 'GET',
+                responseType: 'blob'
+            })
+            .then((response) => {
+                const url = window.URL.createObjectURL(new Blob([response.data]));
+                const link = document.createElement('a');
+                link.href = url;
+                link.setAttribute('download', 'image.jpg');
+                document.body.appendChild(link);
+                link.click();
+            })
+    }
+</script>
+
+</html>
